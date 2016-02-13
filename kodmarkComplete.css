@@ -1,0 +1,79 @@
+input[type=text] {
+    width: 350px;
+    padding: 15px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+}
+#searchWrapper {
+    border: 1px solid #aaa;
+    display: inline-block;
+    position: relative;
+}
+.loading-sprite {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    display: none;
+    width: 18px;
+    animation: spin 1.2s infinite linear;
+    display: none;
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+#resultsWrapper {
+    position: absolute;
+    left: -1px;
+    background: #eee;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    overflow: hidden;
+    display: none;
+    box-shadow: 0 1px 5px rgba(0,0,0,.1);
+}
+#resultsWrapper ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#resultsWrapper li {
+    background: #fff;
+}
+#resultsWrapper li a {
+    display: block;
+    color: #444;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+    font-family: "Helvetica Neue";
+    transition: ease all .1s;
+    font-size:16px;
+    overflow: hidden;
+    padding: 10px 0;
+}
+#resultsWrapper li a img {
+    float: left;
+    margin-right:10px;
+}
+#resultsWrapper li a small {
+    color: #888;
+    font-size: 11px;
+}
+.hovered {
+    background: #f8f8f8 !important;
+}
+#resultsWrapper li:last-child a {
+    border-bottom: none;
+}
+small {
+    clear: both;
+}
